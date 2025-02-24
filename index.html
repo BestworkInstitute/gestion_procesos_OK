@@ -4,66 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión Procesos</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
+            margin: 0;
         }
         .container {
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 90%;
-            max-width: 600px;
+            max-width: 800px;
             padding: 20px;
             text-align: center;
         }
         .logo {
-            max-width: 100px;
+            max-width: 120px;
             width: 100%;
             height: auto;
+            margin-bottom: 20px;
         }
-        button {
-            background-color: #FF7F50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 8px;
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
             font-size: 16px;
-            cursor: pointer;
-            width: 100%;
-            max-width: 300px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: transform 0.2s ease-in-out;
         }
-        button:hover {
-            background-color: #FF6347;
+        .button:hover {
+            transform: scale(1.05);
         }
+        .btn-exec { background-color: #007bff; } /* Azul */
+        .btn-mk { background-color: #28a745; } /* Verde */
+        .btn-assign { background-color: #ff5733; } /* Naranja */
+        .btn-zoom { background-color: #6f42c1; } /* Morado */
+        .btn-onboarding { background-color: #ff9800; } /* Amarillo */
+        .btn-help { background-color: #17a2b8; } /* Celeste */
+        .btn-service { background-color: #d63384; } /* Rosa */
+        .btn-cobranza { background-color: #343a40; } /* Gris Oscuro */
+        .btn-profesor { background-color: #7952b3; } /* Lila */
+        .btn-bienvenida { background-color: #ffc107; } /* Dorado */
+        .btn-testimonios { background-color: #dc3545; } /* Rojo */
+        .btn-live { background-color: #663399; } /* Púrpura */
     </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="https://bestwork.cl/wp-content/uploads/2023/05/Logo.png" alt="Logo Gestión Procesos" class="logo mb-6 mx-auto">
-        <h2 class="text-2xl font-bold mb-4">Gestión Procesos</h2>
-        <div>
-            <button onclick="window.location.href='https://panel-ejecutivas.vercel.app/'">Panel Ejecutiva</button>
-            <button onclick="window.location.href='https://repo-kohl-seven.vercel.app/'">Envío Mensajes MK</button>
-            <button onclick="window.location.href='https://bw-admin-db.vercel.app/'">Gestión Asignación</button>
-            <button onclick="window.location.href='https://bw-mi-avance.vercel.app/'">Links de Zoom</button>
-            <button onclick="window.location.href='https://seguimiento-onboarding-ejecutivas.vercel.app/'">Seguimiento Onboarding</button>
-            <button onclick="window.location.href='https://mensajes-adm.vercel.app/'">Ayuda Alumnos</button>
-            <button onclick="window.location.href='https://mensajes-docenciabestwork.vercel.app/'">Mensajes Servicio</button>
-            <button onclick="window.location.href='https://mensaje-cobranza.vercel.app/'">Cobranza Jackeline</button>
-            <button onclick="window.location.href='https://panel-del-profesor.vercel.app/'">Panel Profesor</button>
-            <button onclick="window.location.href='https://bienvenida-alumno.vercel.app/'">Bienvenida y Onboarding</button>
-            <button onclick="window.location.href='https://testimonios-bestwork.vercel.app/'">Envío Campaña Testimonios</button>
+        <img src="https://bestwork.cl/wp-content/uploads/2023/05/Logo.png" alt="Logo Gestión Procesos" class="logo">
+        <h2 class="text-2xl font-bold mb-4">📊 Gestión de Procesos</h2>
+        
+        <div class="button-container">
+            <a href="https://panel-ejecutivas.vercel.app/" target="_blank" class="button btn-exec">
+                📋 Panel Ejecutiva
+            </a>
+            <a href="https://repo-kohl-seven.vercel.app/" target="_blank" class="button btn-mk">
+                📢 Envío Mensajes MK
+            </a>
+            <a href="https://bw-admin-db.vercel.app/" target="_blank" class="button btn-assign">
+                🏢 Gestión Asignación
+            </a>
+            <a href="https://links-taller-bestwork.vercel.app/" target="_blank" class="button btn-zoom">
+                🎥 Links de Zoom
+            </a>
+            <a href="https://seguimiento-onboarding-ejecutivas.vercel.app/" target="_blank" class="button btn-onboarding">
+                🚀 Seguimiento Onboarding
+            </a>
+            <a href="https://mensajes-adm.vercel.app/" target="_blank" class="button btn-help">
+                🎓 Ayuda Alumnos
+            </a>
+            <a href="https://mensajes-docenciabestwork.vercel.app/" target="_blank" class="button btn-service">
+                📩 Mensajes Servicio
+            </a>
+            <a href="https://panel-del-profesor.vercel.app/" target="_blank" class="button btn-profesor">
+                👨‍🏫 Panel Profesor
+            </a>
+            <a href="https://bienvenida-alumno.vercel.app/" target="_blank" class="button btn-bienvenida">
+                🎉 Bienvenida y Onboarding
+            </a>
+            <a href="https://testimonios-bestwork.vercel.app/" target="_blank" class="button btn-testimonios">
+                🗣️ Envío Testimonios
+            </a>
+            <a href="https://gestion-live.vercel.app/" target="_blank" class="button btn-live">
+                🎬 Gestión Live
+            </a>
         </div>
     </div>
+
 </body>
 </html>
